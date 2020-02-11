@@ -1,0 +1,22 @@
+h2.ui.header.NoTodosMessage {
+    color: white !important;
+    font-size: 36px;
+    text-align: center;
+}
+
+div.flex-container {
+    display: flex;
+}
+
+div.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+div.full-height {
+    min-height: 100vh;
+}
+
+div.flex-vertical {
+    flex-direction: column;
+}

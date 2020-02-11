@@ -1,0 +1,18 @@
+.ui.grid.main-grid {
+    margin: 0;
+    padding: 50px;
+    padding-top: 10px;
+}
+
+.ui.card.todo-card {
+    background-color: rgba(256,256,256,0.1);
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    min-height: 150px;
+    width: 100%;
+}
+
+.description.todo-description {
+    color: white !important;
+}

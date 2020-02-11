@@ -1,25 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useContext} from 'react';
 import './App.css';
+import TodoList from './components/TodoList';
+import NoTodosMessage from './components/NoTodosMessage/NoTodosMessage';
+import { Container } from 'semantic-ui-react';
+import {FirebaseContext} from './contexts/FirebaseContext';
+import AddTodoModal from './components/AddTodoModal';
 
 function App() {
+
+  const {todos} = useContext(FirebaseContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Container fluid>
+      <div className="App">
+      {todos.length > 0 ? 
+      (
+        <>
+          <div className='main-screen-button'>
+          <AddTodoModal />
+          </div>
+          <TodoList todos={todos} />
+        </>
+      ) :
+      <NoTodosMessage />
+      }
     </div>
+    </Container>
+    
   );
 }
 
