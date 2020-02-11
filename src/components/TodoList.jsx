@@ -19,10 +19,10 @@ export default function TodoList({todos}) {
                         </Card.Content>
                         <Card.Content extra>
                             <div className='ui two buttons'>
-                                <Button color='green'>
+                                <Button inverted color='green'>
                                     Done
                                 </Button>
-                                <Button color='red'>
+                                <Button inverted color='red'>
                                     Cancel
                                 </Button>
                             </div>
